@@ -1,0 +1,266 @@
+<?xml version="1.0" ?>
+<robot name="arctos" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<!-- Test this file using URDF tester: ros2 launch urdf_tutorial display.launch.py model:=filepath -->
+<!-- Create a moveit configuration package from this using: ros2 launch moveit_setup_assistant setup_assistant.launch.py -->
+
+<link name="base_link">
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/visual/base_link.stl"/>
+    </geometry>
+    <material name="">
+      <color rgba="0.5 0.5 0.5 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/collision/base_link.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1">
+  <visual>
+    <origin xyz="0 -0.00041681658083819966929 -0.11275000125169754028" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/visual/link_1.stl"/>
+    </geometry>
+    <material name="">
+      <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0 -0.00041681658083819966929 -0.11275000125169754028" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/collision/link_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2">
+  <visual>
+    <origin xyz="0.0050306233745687611164 0.12119288939136513283 0" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/visual/link_2.stl"/>
+    </geometry>
+    <material name="">
+      <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0.0050306233745687611164 0.12119288939136513283 0" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/collision/link_2.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3">
+  <visual>
+    <origin xyz="-0.045068866773434773654 0.0089066394204357912656 -0.0020322035998106002808" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/visual/link_3.stl"/>
+    </geometry>
+    <material name="">
+      <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="-0.045068866773434773654 0.0089066394204357912656 -0.0020322035998106002808" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/collision/link_3.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_4">
+  <visual>
+    <origin xyz="0.00023336745320452095299 -0.0017717950372168056461 0.068930938844942335475" rpy="-1.5708005289820567985 0 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/visual/link_4.stl"/>
+    </geometry>
+    <material name="">
+      <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0.00023336745320452095299 -0.0017717950372168056461 0.068930938844942335475" rpy="-1.5708005289820567985 0 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/collision/link_4.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_5">
+  <visual>
+    <origin xyz="-0.0042330650963633975614 -0.0051364205700892284767 0" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/visual/link_5.stl"/>
+    </geometry>
+    <material name="">
+      <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="-0.0042330650963633975614 -0.0051364205700892284767 0" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/collision/link_5.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_6">
+  <visual>
+    <origin xyz="0 0 0.0030423125717788934708" rpy="-1.570796326794896558 0 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/visual/link_6.stl"/>
+    </geometry>
+    <material name="">
+      <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0.0030423125717788934708" rpy="-1.570796326794896558 0 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/collision/link_6.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper">
+  <visual>
+    <origin xyz="0 0 0.019161773845553342621" rpy="-1.570796326794896558 0 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/visual/gripper.stl"/>
+    </geometry>
+    <material name="">
+      <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0.019161773845553342621" rpy="-1.570796326794896558 0 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/collision/gripper.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_jaw">
+  <visual>
+    <origin xyz="0.0078078261650459807042 0.014880206056590516983 0.016259277239441760621" rpy="-3.141592653589793116 0 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/visual/left_jaw.stl"/>
+    </geometry>
+    <material name="">
+      <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0.0078078261650459807042 0.014880206056590516983 0.016259277239441760621" rpy="-3.141592653589793116 0 0" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/collision/left_jaw.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_jaw">
+  <visual>
+    <origin xyz="0.0098252356227949769196 0.01479670833373308847 0.016258545219898112855" rpy="0 0 -3.141592653589793116" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/visual/right_jaw.stl"/>
+    </geometry>
+    <material name="">
+      <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0.0098252356227949769196 0.01479670833373308847 0.016258545219898112855" rpy="0 0 -3.141592653589793116" />
+    <geometry>
+      <mesh filename="package://arctos_description/meshes/collision/right_jaw.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tool"/>
+
+<joint name="joint_1" type="revolute">
+  <origin xyz="0 0.00055605489707216942258 0.11100000143051147461" rpy="0 0 0" />
+  <parent link="base_link"/>
+  <child link="link_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit effort="87" lower="-3.14" upper="3.14" velocity="2.3925"/>
+</joint>
+
+<joint name="joint_2" type="revolute">
+  <origin xyz="0 -0.020781082905280513079 0.17678425580620604762" rpy="1.570796326794896558 -0 1.570796326794896558" />
+  <parent link="link_1"/>
+  <child link="link_2"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit effort="87" lower="-1.4" upper="2.2" velocity="2.3925"/>
+</joint>
+
+<joint name="joint_3" type="revolute">
+  <origin xyz="0.0013376010636743790316 0.26104231465218918906 0" rpy="0 -0 0" />
+  <parent link="link_2"/>
+  <child link="link_3"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit effort="87" lower="-1.6" upper="1.1" velocity="2.3925"/>
+</joint>
+
+<joint name="joint_4" type="revolute">
+  <origin xyz="-0.1396972976763926344 0.021603620824119817989 -0.0020149579452040855196" rpy="0 -1.570796326794896558 0" />
+  <parent link="link_3"/>
+  <child link="link_4"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit effort="87" lower="-3.14" upper="3.14" velocity="2.3925"/>
+</joint>
+
+<joint name="joint_5" type="revolute">
+  <origin xyz="0.00023335107063317261922 -0.0017076520363463743024 0.11918757822437711646" rpy="-1.4933778981106418104 1.5707921119830681178 -1.493377898111326596" />
+  <parent link="link_4"/>
+  <child link="link_5"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit effort="87" lower="-1.8" upper="1.8" velocity="2.3925"/>
+</joint>
+
+<joint name="joint_6" type="revolute">
+  <origin xyz="-0.0358229605831950626 0 0" rpy="0 -1.570796326794896558 0" />
+  <parent link="link_5"/>
+  <child link="link_6"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit effort="87" lower="-3.14" upper="3.14" velocity="2.3925"/>
+</joint>
+
+<joint name="gripper" type="fixed">
+  <origin xyz="0 0 0.0060846251435577314304" rpy="0 0 0" />
+  <parent link="link_6"/>
+  <child link="gripper"/>
+</joint>
+
+<joint name="left_jaw" type="prismatic">
+  <origin xyz="0.0077708606105235935799 -0.030484645745930794014 0.039993524652900958039" rpy="1.570796326794896558 0 3.141592653589793116" />
+  <parent link="gripper"/>
+  <child link="left_jaw"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit effort="87" upper="0.015" lower="0.0" velocity="2.3925"/>
+</joint>
+
+<joint name="right_jaw" type="prismatic">
+  <origin xyz="-0.01172663933588792215 0.029515354775609847771 0.039922151969763619572" rpy="1.570796326794896558 0 0" />
+  <parent link="gripper"/>
+  <child link="right_jaw"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit effort="87" upper="0.015" lower="0.0" velocity="2.3925"/>
+  <mimic joint="left_jaw" />
+</joint>
+
+<joint name="tool" type="fixed">
+  <origin xyz="0.0 0.0 0.07" rpy="0 0 0" />
+  <parent link="link_6"/>
+  <child link="tool"/>
+</joint>
+
+</robot>
